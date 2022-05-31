@@ -1,5 +1,5 @@
-name: Code Guide by @mdo
-description: Standards for developing consistent, flexible, and sustainable HTML and CSS.
+name: 程式碼指南，由 @mdo 撰寫
+description: 一致、有彈性且能長期維護的 HTML、CSS 開發標準。
 url: https://codeguide.co
 permalink: pretty
 sass:
