@@ -16,7 +16,7 @@ layout: default
 - [實用性優先於純粹性](#practicality-over-purity)
 - [屬性順序](#attribute-order)
 - [二元屬性](#boolean-attributes)
-- [精簡使用標記](#reduce-markup)
+- [精簡標記使用](#reduce-markup)
 - [編輯器偏好設定](#editor-preferences)
 </div>
 
@@ -76,6 +76,7 @@ Enforce these, or your own, agreed upon guidelines at all times. 不管大還是
 
 <div markdown="1">
 ### HTML5 Doctype
+{: #html5-doctype }
 
 Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page. In keeping with the suggested syntax, keep it lowercase.
 
@@ -95,6 +96,7 @@ Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirk
 
 <div markdown="1">
 ### 語言屬性
+{: #language-attribute }
 
 From the HTML5 spec:
 
@@ -111,6 +113,7 @@ Read more about the `lang` attribute [in the spec](https://html.spec.whatwg.org/
 
 <div markdown="1">
 ### IE 相容模式
+{: #ie-compatibility-mode }
 
 There's no need to include the Internet Explorer document compatibility `<meta>` tag these days, unless you need support for IE10 and older. The tag was dropped in IE11 and isn't used in Microsoft Edge (legacy or otherwise).
 
@@ -124,6 +127,7 @@ For more information, [read this awesome Stack Overflow article](https://stackov
 
 <div markdown="1">
 ### 文字編碼
+{: #character-encoding }
 
 Ensure proper content rendering by declaring an explicit character encoding. This also allows you to use regular characters instead of their HTML entities, like `—` instead of `&emdash;`, provided their encoding matches that of the document. For some reserved XML characters—like ampersand, non-breaking spaces, less/greater than, and quotes—you may still need to use the HTML character entities.
 
@@ -141,6 +145,7 @@ UTF-8 is the recommended encoding.
 
 <div markdown="1">
 ### 匯入 CSS 和 JavaScript
+{: #css-and-javascript-includes }
 
 Per HTML5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
 
@@ -166,6 +171,7 @@ Per HTML5 spec, typically there is no need to specify a `type` when including CS
 
 <div markdown="1">
 ### 實用性優先於純粹性
+{: #practicality-over-purity }
 
 Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
 </div>
@@ -180,6 +186,7 @@ Strive to maintain HTML standards and semantics, but not at the expense of pract
 
 <div markdown="1">
 ### 屬性順序
+{: #attribute-order }
 
 HTML attributes should come in this particular order for easier reading of code.
 
@@ -207,6 +214,7 @@ Attributes that are most commonly used for identifying elements should come firs
 
 <div markdown="1">
 ### 二元屬性
+{: #boolean-attributes }
 
 A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.
 
@@ -232,7 +240,8 @@ In short, **don't add a value**.
 ```
 
 <div markdown="1">
-### 精簡使用標記
+### 精簡標記使用
+{: #reduce-markup }
 
 Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML.
 </div>
@@ -249,6 +258,7 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 
 <div markdown="1">
 ### 編輯器偏好設定
+{: #editor-preferences }
 
 Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:
 
@@ -306,6 +316,7 @@ Questions on the terms used here? See the [syntax section of the Cascading Style
 
 <div markdown="1">
 ### 宣告順序
+{: #declaration-order }
 
 Property declarations should be grouped together in the following order:
 
@@ -361,6 +372,7 @@ For a complete list of properties and their order, please see the [property orde
 
 <div markdown="1">
 ### 邏輯屬性
+{: #logical-properties }
 
 Logical properties are alternatives to directional and dimensonal properties based on abstract terms like *block* and *inline*. By default, block refers to the vertical direction (top and bottom) while inline refers to the horizontal direction (right and left). You can begin to use these values in your CSS in all modern, evergreen browsers.
 
@@ -391,6 +403,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
 
 <div markdown="1">
 ### 顏色
+{: #colors }
 
 With the support of [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/) [in all major browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb#space-separated_values), `rgba()` and `hsla()` are now aliases for `rgb()` and `hsl()`, meaning you can modify alpha values in `rgb()` and `hsl()`. Along with this comes support for new space-separated syntax for color values. For compability with future CSS color functions, use this new syntax.
 
@@ -411,6 +424,7 @@ Regardless of your color values and syntax, always ensure your color choices mee
 
 <div markdown="1">
 ### 避免使用 `@import`
+{: #avoid-imports }
 
 Compared to `<link>`s, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:
 
@@ -433,6 +447,7 @@ For more information, [read this article by Steve Souders](https://www.stevesoud
 
 <div markdown="1">
 ### Media Query 放置方法
+{: #media-query-placement }
 
 Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
 </div>
