@@ -37,12 +37,12 @@ layout: default
 - [Class 名稱](#class-names)
 - [選擇器](#selectors)
 - [子代與後代選擇器](#child-and-descendant-selectors)
-- [組織方法](#organization)
+- [組織結構](#organization)
 </div>
 
 ## 黃金原則
 
-Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please [open an issue on GitHub](https://github.com/mdo/code-guide/issues/new).
+Enforce these, or your own, agreed upon guidelines at all times. 不管大還是小，有錯誤的地方請大聲說出來。想要對這份程式碼編寫指南進行新增或貢獻，請[在 Github 開 Issue](https://github.com/mdo/code-guide/issues/new)。
 
 > Every line of code should appear to be written by a single person, no matter the number of contributors.
 
@@ -52,12 +52,13 @@ Enforce these, or your own, agreed upon guidelines at all times. Small or large,
 ### 語法
 {: #html-syntax }
 
-- Don't capitalize tags, including the doctype.
-- Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.
-- Nested elements should be indented once (two spaces).
-- Always use double quotes, never single quotes, on attributes.
+- 不以大寫使用標籤，包含 Doctype。
+- 使用 2 個空白的 Soft Tab—這是可以保證程式碼在任何環境，都長得一樣的唯一方法。
+- 巢狀裡面元素應該要縮排一次（2 個空白）。
+- 屬性一定要用雙引號，絕不使用單引號。
+-
 - Don't include a trailing slash in self-closing elements—the [HTML5 spec](https://html.spec.whatwg.org/multipage/syntax.html#syntax-start-tag) says they're optional.
-- Don’t omit optional closing tags (e.g. `</li>` or `</body>`).
+- 不能省略非必要的關閉標籤（例如：`</li>` 或 `</body>`）。
 </div>
 
 ```html
@@ -74,7 +75,7 @@ Enforce these, or your own, agreed upon guidelines at all times. Small or large,
 ```
 
 <div markdown="1">
-### HTML5 doctype
+### HTML5 Doctype
 
 Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page. In keeping with the suggested syntax, keep it lowercase.
 
@@ -93,7 +94,7 @@ Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirk
 ```
 
 <div markdown="1">
-### Language attribute
+### 語言屬性
 
 From the HTML5 spec:
 
@@ -109,7 +110,7 @@ Read more about the `lang` attribute [in the spec](https://html.spec.whatwg.org/
 ```
 
 <div markdown="1">
-### IE compatibility mode
+### IE 相容模式
 
 There's no need to include the Internet Explorer document compatibility `<meta>` tag these days, unless you need support for IE10 and older. The tag was dropped in IE11 and isn't used in Microsoft Edge (legacy or otherwise).
 
@@ -122,7 +123,7 @@ For more information, [read this awesome Stack Overflow article](https://stackov
 ```
 
 <div markdown="1">
-### Character encoding
+### 文字編碼
 
 Ensure proper content rendering by declaring an explicit character encoding. This also allows you to use regular characters instead of their HTML entities, like `—` instead of `&emdash;`, provided their encoding matches that of the document. For some reserved XML characters—like ampersand, non-breaking spaces, less/greater than, and quotes—you may still need to use the HTML character entities.
 
@@ -139,7 +140,7 @@ UTF-8 is the recommended encoding.
 ```
 
 <div markdown="1">
-### CSS and JavaScript includes
+### 匯入 CSS 和 JavaScript
 
 Per HTML5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
 
@@ -164,7 +165,7 @@ Per HTML5 spec, typically there is no need to specify a `type` when including CS
 ```
 
 <div markdown="1">
-### Practicality over purity
+### 實用性優先於純粹性
 
 Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
 </div>
@@ -178,7 +179,7 @@ Strive to maintain HTML standards and semantics, but not at the expense of pract
 ```
 
 <div markdown="1">
-### Attribute order
+### 屬性順序
 
 HTML attributes should come in this particular order for easier reading of code.
 
@@ -205,7 +206,7 @@ Attributes that are most commonly used for identifying elements should come firs
 ```
 
 <div markdown="1">
-### Boolean attributes
+### 二元屬性
 
 A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.
 
@@ -231,7 +232,7 @@ In short, **don't add a value**.
 ```
 
 <div markdown="1">
-### Reduce markup
+### 精簡使用標記
 
 Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML.
 </div>
@@ -247,7 +248,7 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 ```
 
 <div markdown="1">
-### Editor preferences
+### 編輯器偏好設定
 
 Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:
 
@@ -262,7 +263,7 @@ Consider documenting and applying these preferences to your project's `.editorco
 ## CSS
 
 <div markdown="1">
-### Syntax
+### 語法
 {: #css-syntax }
 
 - Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.
@@ -304,7 +305,7 @@ Questions on the terms used here? See the [syntax section of the Cascading Style
 ```
 
 <div markdown="1">
-### Declaration order
+### 宣告順序
 
 Property declarations should be grouped together in the following order:
 
@@ -359,7 +360,7 @@ For a complete list of properties and their order, please see the [property orde
 ```
 
 <div markdown="1">
-### Logical properties
+### 邏輯屬性
 
 Logical properties are alternatives to directional and dimensonal properties based on abstract terms like *block* and *inline*. By default, block refers to the vertical direction (top and bottom) while inline refers to the horizontal direction (right and left). You can begin to use these values in your CSS in all modern, evergreen browsers.
 
@@ -389,7 +390,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
 ```
 
 <div markdown="1">
-### Colors
+### 顏色
 
 With the support of [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/) [in all major browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb#space-separated_values), `rgba()` and `hsla()` are now aliases for `rgb()` and `hsl()`, meaning you can modify alpha values in `rgb()` and `hsl()`. Along with this comes support for new space-separated syntax for color values. For compability with future CSS color functions, use this new syntax.
 
@@ -409,7 +410,7 @@ Regardless of your color values and syntax, always ensure your color choices mee
 ```
 
 <div markdown="1">
-### Avoid `@import`s
+### 避免使用 `@import`
 
 Compared to `<link>`s, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:
 
@@ -431,7 +432,7 @@ For more information, [read this article by Steve Souders](https://www.stevesoud
 ```
 
 <div markdown="1">
-### Media query placement
+### Media Query 放置方法
 
 Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
 </div>
@@ -449,7 +450,7 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 ```
 
 <div markdown="1">
-### Single declarations
+### 單一宣告
 
 In instances where a rule set includes **only one declaration**, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.
 
@@ -475,7 +476,7 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 ```
 
 <div markdown="1">
-### Shorthand notation
+### 捷徑語法標記
 
 Limit shorthand declaration usage to instances where you must explicitly set all available values. Frequently overused shorthand properties include:
 
@@ -513,7 +514,7 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
 ```
 
 <div markdown="1">
-### Nesting in preprocessors
+### 在預處理器使用巢狀結構
 
 Avoid unnecessary nesting in preprocessors whenever possible—keep it simple and avoid reverse nesting. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
 
@@ -535,7 +536,7 @@ Avoid unnecessary nesting in preprocessors whenever possible—keep it simple an
 ```
 
 <div markdown="1">
-### Operators in preprocessors
+### 在預處理器使用運算子
 
 For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
 </div>
@@ -553,7 +554,7 @@ For improved readability, wrap all math operations in parentheses with a single 
 ```
 
 <div markdown="1">
-### Comments
+### 註解
 
 Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name. Use the `//` syntax when writing CSS with preprocessors. When shipping CSS to production, remove all comments.
 
@@ -575,7 +576,7 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 ```
 
 <div markdown="1">
-### Class names
+### Class 名稱
 
 - Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., `.btn` and `.btn-danger`).
 - Avoid excessive and arbitrary shorthand notation. `.btn` is useful for _button_, but `.s` doesn't mean anything.
@@ -600,7 +601,7 @@ It's also useful to apply many of these same rules when creating custom properti
 ```
 
 <div markdown="1">
-### Selectors
+### 選擇器
 
 - Use classes over generic element tags for more explicit and reliable styling that isn't dependent on your markup.
 - Avoid using several attribute selectors (e.g., `[class^="..."]`) on commonly occuring components. Browser performance is known to be impacted by these.
@@ -626,7 +627,7 @@ span { ... }
 ```
 
 <div markdown="1">
-### Child and descendant selectors
+### 子代與後代選擇器
 
 When necessary, it may be helpful to use [the child combinator (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) to limit the cascade of some styles in elements like `<table>`s that are often recursively nested. Use it to limit styles to the immediate children elements of a parent element to avoid unnecessary overrides later on.
 </div>
@@ -639,7 +640,7 @@ When necessary, it may be helpful to use [the child combinator (`>`)](https://de
 ```
 
 <div markdown="1">
-### Organization
+### 組織結構
 
 - Organize sections of code by component.
 - Develop a consistent commenting hierarchy.
