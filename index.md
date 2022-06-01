@@ -2,45 +2,45 @@
 layout: default
 ---
 
-<h2 id="toc">Table of contents</h2>
+<h2 id="toc">內容目錄</h2>
 
 <div markdown="1">
 ### [HTML](#html)
 
-- [HTML syntax](#html-syntax)
-- [HTML5 doctype](#html5-doctype)
-- [Language attribute](#language-attribute)
-- [IE compatibility mode](#ie-compatibility-mode)
-- [Character encoding](#character-encoding)
-- [CSS and JavaScript includes](#css-and-javascript-includes)
-- [Practicality over purity](#practicality-over-purity)
-- [Attribute order](#attribute-order)
-- [Boolean attributes](#boolean-attributes)
-- [Reduce markup](#reduce-markup)
-- [Editor preferences](#editor-preferences)
+- [HTML 語法](#html-syntax)
+- [HTML5 Doctype](#html5-doctype)
+- [語言屬性](#language-attribute)
+- [IE 相容模式](#ie-compatibility-mode)
+- [文字編碼](#character-encoding)
+- [匯入 CSS 和 JavaScript](#css-and-javascript-includes)
+- [實用性優先於純粹性](#practicality-over-purity)
+- [屬性順序](#attribute-order)
+- [二元屬性](#boolean-attributes)
+- [精簡使用標記](#reduce-markup)
+- [編輯器偏好設定](#editor-preferences)
 </div>
 
 <div markdown="1">
 ### [CSS](#css)
 
-- [CSS syntax](#css-syntax)
-- [Declaration order](#declaration-order)
-- [Colors](#colors)
-- [Logical properties](#logical-properties)
-- [Avoid @import`s](#avoid-imports)
-- [Media query placement](#media-query-placement)
-- [Single declarations](#single-declarations)
-- [Shorthand notation](#shorthand-notation)
-- [Nesting in preprocessors](#nesting-in-preprocessors)
-- [Operators in preprocessors](#operators-in-preprocessors)
-- [Comments](#comments)
-- [Class names](#class-names)
-- [Selectors](#selectors)
-- [Child and descendant selectors](#child-and-descendant-selectors)
-- [Organization](#organization)
+- [CSS 語法](#css-syntax)
+- [宣告順序](#declaration-order)
+- [顏色](#colors)
+- [邏輯屬性](#logical-properties)
+- [避免使用 @import](#avoid-imports)
+- [Media Query 放置方法](#media-query-placement)
+- [單一宣告](#single-declarations)
+- [捷徑語法標記](#shorthand-notation)
+- [在預處理器使用巢狀結構](#nesting-in-preprocessors)
+- [在預處理器使用運算子](#operators-in-preprocessors)
+- [註解](#comments)
+- [Class 名稱](#class-names)
+- [選擇器](#selectors)
+- [子代與後代選擇器](#child-and-descendant-selectors)
+- [組織方法](#organization)
 </div>
 
-## Golden rule
+## 黃金原則
 
 Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please [open an issue on GitHub](https://github.com/mdo/code-guide/issues/new).
 
@@ -49,7 +49,7 @@ Enforce these, or your own, agreed upon guidelines at all times. Small or large,
 ## HTML
 
 <div markdown="1">
-### Syntax
+### 語法
 {: #html-syntax }
 
 - Don't capitalize tags, including the doctype.
@@ -64,7 +64,7 @@ Enforce these, or your own, agreed upon guidelines at all times. Small or large,
 <!doctype html>
 <html>
   <head>
-    <title>Page title</title>
+    <title>頁面標題</title>
   </head>
   <body>
     <img src="images/company-logo.png" alt="Company">
