@@ -11,7 +11,7 @@ layout: default
 - [HTML5 Doctype](#html5-doctype)
 - [語言屬性](#language-attribute)
 - [IE 相容模式](#ie-compatibility-mode)
-- [文字編碼](#character-encoding)
+- [字元編碼](#character-encoding)
 - [匯入 CSS 和 JavaScript](#css-and-javascript-includes)
 - [實用性優先於純粹性](#practicality-over-purity)
 - [屬性順序](#attribute-order)
@@ -101,7 +101,7 @@ layout: default
 
 > Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 
-從[規格](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element)，深入閱讀 `lang` 屬性。前往 <abbr title="Internet Assigned Numbers Authority">IANA</abbr> 找 [語言代碼清單](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)。
+從[規格](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element)，深入閱讀 `lang` 屬性。前往 <abbr title="Internet Assigned Numbers Authority">IANA</abbr> 查看[語言代碼清單](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)。
 </div>
 
 ```html
@@ -114,9 +114,9 @@ layout: default
 ### IE 相容模式
 {: #ie-compatibility-mode }
 
-There's no need to include the Internet Explorer document compatibility `<meta>` tag these days, unless you need support for IE10 and older. The tag was dropped in IE11 and isn't used in Microsoft Edge (legacy or otherwise).
+現今，除非得要支援 IE10 或更舊版，已經不需要加上 Internet Explorer 文件的相容 `<meta>` 標籤。這組標籤已經在 IE11 棄用，Microsoft Edge不管是舊版或其它版本，也都不會用到。
 
-For more information, [read this awesome Stack Overflow article](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do).
+詳細資訊[請看這篇很讚的 Stack Overflow 文章](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do)。
 </div>
 
 ```html
@@ -125,10 +125,10 @@ For more information, [read this awesome Stack Overflow article](https://stackov
 ```
 
 <div markdown="1">
-### 文字編碼
+### 字元編碼
 {: #character-encoding }
 
-Ensure proper content rendering by declaring an explicit character encoding. This also allows you to use regular characters instead of their HTML entities, like `—` instead of `&emdash;`, provided their encoding matches that of the document. For some reserved XML characters—like ampersand, non-breaking spaces, less/greater than, and quotes—you may still need to use the HTML character entities.
+明確宣告字元編碼，就可以確保輸出的內容是正確的。這樣也可以使用一般文字，而不是 HTML Entity。例如：只要編碼與文件是相符的，就可以用 `—` 取代 `&emdash;`。有些 XML 的保留字元，像是與符號 (&)、不換行空格、少於/多於與引號，可能還是得要用 HTML 字元 Entity。
 
 建議使用 UTF-8 編碼。
 </div>
@@ -138,7 +138,7 @@ Ensure proper content rendering by declaring an explicit character encoding. Thi
   <meta charset="utf-8">
 </head>
 <body>
-  <p>Use an em dash like so—no HTML entity required.</p>
+  <p>破折號就這樣使用—毋需得用上 HTML Entity。</p>
 </body>
 ```
 
