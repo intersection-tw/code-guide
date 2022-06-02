@@ -42,9 +42,9 @@ layout: default
 
 ## 黃金原則
 
-Enforce these, or your own, agreed upon guidelines at all times. 不管大還是小，有錯誤的地方請大聲說出來。想要對這份程式碼編寫指南進行新增或貢獻，請[在 Github 開 Issue](https://github.com/mdo/code-guide/issues/new)。
+確實要求每個人，或自己，時時刻刻都一致認同規範。不管大還是小，有錯誤的地方請大聲說出來。想要對這份程式碼編寫指南進行新增或貢獻，請[在 Github 開 Issue](https://github.com/mdo/code-guide/issues/new)。
 
-> Every line of code should appear to be written by a single person, no matter the number of contributors.
+> 每行程式碼，不管有多少人參與，應該要看起來是一個人寫出來的。
 
 ## HTML
 
@@ -56,8 +56,7 @@ Enforce these, or your own, agreed upon guidelines at all times. 不管大還是
 - 使用 2 個空白的 Soft Tab—這是可以保證程式碼在任何環境，都長得一樣的唯一方法。
 - 巢狀裡面元素應該要縮排一次（2 個空白）。
 - 屬性一定要用雙引號，絕不使用單引號。
--
-- Don't include a trailing slash in self-closing elements—the [HTML5 spec](https://html.spec.whatwg.org/multipage/syntax.html#syntax-start-tag) says they're optional.
+- 在自帶關閉符號的元素不在尾端加上斜線－[HTML5 規格](https://html.spec.whatwg.org/multipage/syntax.html#syntax-start-tag)提到：這不是必需的。
 - 不能省略非必要的關閉標籤（例如：`</li>` 或 `</body>`）。
 </div>
 
@@ -98,7 +97,7 @@ Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirk
 ### 語言屬性
 {: #language-attribute }
 
-From the HTML5 spec:
+根據 HTML5 規格：
 
 > Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 
@@ -121,7 +120,7 @@ For more information, [read this awesome Stack Overflow article](https://stackov
 </div>
 
 ```html
-<!-- IE10 and below only -->
+<!-- 適用於 IE10 以前 -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 ```
 
@@ -131,7 +130,7 @@ For more information, [read this awesome Stack Overflow article](https://stackov
 
 Ensure proper content rendering by declaring an explicit character encoding. This also allows you to use regular characters instead of their HTML entities, like `—` instead of `&emdash;`, provided their encoding matches that of the document. For some reserved XML characters—like ampersand, non-breaking spaces, less/greater than, and quotes—you may still need to use the HTML character entities.
 
-UTF-8 is the recommended encoding.
+建議使用 UTF-8 編碼。
 </div>
 
 ```html
@@ -157,10 +156,10 @@ Per HTML5 spec, typically there is no need to specify a `type` when including CS
 </div>
 
 ```html
-<!-- External CSS -->
+<!-- 外部 CSS -->
 <link rel="stylesheet" href="code-guide.css">
 
-<!-- In-document CSS -->
+<!-- 文件內的 CSS -->
 <style>
   /* ... */
 </style>
@@ -177,10 +176,10 @@ Strive to maintain HTML standards and semantics, but not at the expense of pract
 </div>
 
 ```html
-<!-- Good -->
+<!-- 很好 -->
 <button>...</button>
 
-<!-- Not good -->
+<!-- 不好 -->
 <div class="btn" onClick="...">...</div>
 ```
 
@@ -247,12 +246,12 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 </div>
 
 ```html
-<!-- Not so great -->
+<!-- 不怎麼好 -->
 <span class="avatar">
   <img src="...">
 </span>
 
-<!-- Better -->
+<!-- 好多了 -->
 <img class="avatar" src="...">
 ```
 
@@ -295,7 +294,7 @@ Questions on the terms used here? See the [syntax section of the Cascading Style
 </div>
 
 ```scss
-// Bad CSS
+// 壞 CSS
 .selector, .selector-secondary, .selector[type=text] {
   padding:15px;
   margin:0px 0px 15px;
@@ -303,7 +302,7 @@ Questions on the terms used here? See the [syntax section of the Cascading Style
   box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
 }
 
-// Good CSS
+// 好 CSS
 .selector,
 .selector-secondary,
 .selector[type="text"] {
@@ -337,7 +336,7 @@ For a complete list of properties and their order, please see the [property orde
 
 ```scss
 .declaration-order {
-  // Positioning
+  // 設定位置
   position: absolute;
   top: 0;
   right: 0;
@@ -345,7 +344,7 @@ For a complete list of properties and their order, please see the [property orde
   left: 0;
   z-index: 100;
 
-  // Box model
+  // Box 模型
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,19 +352,19 @@ For a complete list of properties and their order, please see the [property orde
   width: 100px;
   height: 100px;
 
-  // Typography
+  // 文字排版
   font: normal 14px "Helvetica Neue", sans-serif;
   line-height: 1.5;
   color: #333;
   text-align: center;
   text-decoration: underline;
 
-  // Visual
+  // 視覺
   background-color: #f5f5f5;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 
-  // Misc
+  // 其它
   opacity: 1;
 }
 ```
@@ -378,7 +377,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
 
 **Why use logical properties?** Not every language flows left-ro-right like English, so the [writing mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) needs to be flexible. With logical properties, you can easily support languages that can be written horizontally or vertically (like Chinese, Japanese, and Korean). Plus, they're usually shorter and simpler to write.
 
-**Additional reading:**
+**延伸閱讀**
 
 - [CSS Logical Properties and Values – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
 - [CSS Logical Properties and Values — CSS Tricks](https://css-tricks.com/css-logical-properties-and-values/)
@@ -386,7 +385,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
 </div>
 
 ```scss
-// Without logical properties
+// 沒有邏輯屬性
 .element {
   margin-right: auto;
   margin-left: auto;
@@ -394,7 +393,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
   border-bottom: 1px solid #eee;
 }
 
-// With logical properties
+// 有邏輯屬性
 .element {
   margin-inline: auto;
   border-block: 1px solid #eee;
@@ -409,7 +408,7 @@ With the support of [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/) [in
 
 Regardless of your color values and syntax, always ensure your color choices meet [WCAG minimum contrast ratios](https://webaim.org/articles/contrast/) (4.5:1 for 16px and smaller, 3:1 for larger).
 
-**Additional reading:**
+**延伸閱讀：**
 
 - [Smashing Magazine - A Guide To Modern CSS Colors](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
 - [`rgb()` - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb)
@@ -436,10 +435,10 @@ For more information, [read this article by Steve Souders](https://www.stevesoud
 </div>
 
 ```html
-<!-- Use link elements -->
+<!-- 使用 link 元素 -->
 <link rel="stylesheet" href="core.css">
 
-<!-- Avoid @imports -->
+<!-- 避免使用 @import -->
 <style>
   @import url("more.css");
 </style>
@@ -474,12 +473,12 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 </div>
 
 ```scss
-// Single declarations on one line
+// 用一行來表示單一宣告
 .span1 { width: 60px; }
 .span2 { width: 140px; }
 .span3 { width: 220px; }
 
-// Multiple declarations, one per line
+// 多組宣告則是每個一行
 .sprite {
   display: inline-block;
   width: 16px;
@@ -512,7 +511,7 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
 </div>
 
 ```scss
-// Bad example
+// 不良範例
 .element {
   margin: 0 0 10px;
   background: red;
@@ -520,7 +519,7 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
   border-radius: 3px 3px 0 0;
 }
 
-// Good example
+// 優良範例
 .element {
   margin-bottom: 10px;
   background-color: red;
@@ -536,17 +535,17 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
 
 Avoid unnecessary nesting in preprocessors whenever possible—keep it simple and avoid reverse nesting. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
 
-**Additional reading:**
+**延伸閱讀：**
 
 - <a href="https://markdotto.com/2015/07/20/css-nesting/">Nesting in Sass and Less</a>
 </div>
 
 ```scss
-// Without nesting
+// 沒有巢狀結構
 .table > thead > tr > th { … }
 .table > thead > tr > td { … }
 
-// With nesting
+// 有巢狀結構
 .table > thead > tr {
   > th { … }
   > td { … }
@@ -561,12 +560,12 @@ For improved readability, wrap all math operations in parentheses with a single 
 </div>
 
 ```scss
-// Bad example
+// 不良範例
 .element {
   margin: 10px 0 @variable*2 10px;
 }
 
-// Good example
+// 優良範例
 .element {
   margin: 10px 0 (@variable * 2) 10px;
 }
@@ -582,13 +581,13 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 </div>
 
 ```scss
-// Bad example
+// 不良範例
 // Modal header
 .modal-header {
   ...
 }
 
-// Good example
+// 優良範例
 // Wrapping element for .modal-title and .modal-close
 .modal-header {
   ...
@@ -610,12 +609,12 @@ It's also useful to apply many of these same rules when creating custom properti
 </div>
 
 ```scss
-// Bad example
+// 不良範例
 .t { ... }
 .red { ... }
 .header { ... }
 
-// Good example
+// 優良範例
 .tweet { ... }
 .important { ... }
 .tweet-header { ... }
@@ -630,19 +629,19 @@ It's also useful to apply many of these same rules when creating custom properti
 - Keep selectors short and strive to limit the number of elements in each selector to three.
 - Scope classes to the closest parent `only` when necessary (e.g., when not using prefixed classes).
 
-**Additional reading:**
+**延伸閱讀：**
 
 - [Scope CSS classes with prefixes](https://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
 - [Stop the cascade](https://markdotto.com/2012/03/02/stop-the-cascade/)
 </div>
 
 ```scss
-// Bad example
+// 不良範例
 span { ... }
 .page-container #stream .stream-item .tweet .tweet-header .username { ... }
 .avatar { ... }
 
-// Good example
+// 優良範例
 .avatar { ... }
 .tweet-header .username { ... }
 .tweet .avatar { ... }
