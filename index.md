@@ -12,7 +12,7 @@ layout: default
 - [語言屬性](#language-attribute)
 - [IE 相容模式](#ie-compatibility-mode)
 - [字元編碼](#character-encoding)
-- [匯入 CSS 和 JavaScript](#css-and-javascript-includes)
+- [附上 CSS 和 JavaScript](#css-and-javascript-includes)
 - [實用性優先於純粹性](#practicality-over-purity)
 - [屬性順序](#attribute-order)
 - [二元屬性](#boolean-attributes)
@@ -116,7 +116,7 @@ layout: default
 
 現今，除非得要支援 IE10 或更舊版，已經不需要加上 Internet Explorer 文件的相容 `<meta>` 標籤。這組標籤已經在 IE11 棄用，Microsoft Edge不管是舊版或其它版本，也都不會用到。
 
-詳細資訊[請看這篇很讚的 Stack Overflow 文章](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do)。
+詳細資訊請看這篇[很讚的 Stack Overflow 文章](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do)。
 </div>
 
 ```html
@@ -143,16 +143,16 @@ layout: default
 ```
 
 <div markdown="1">
-### 匯入 CSS 和 JavaScript
+### 附上 CSS 和 JavaScript
 {: #css-and-javascript-includes }
 
-Per HTML5 spec, typically there is no need to specify a `type` when including CSS and JavaScript files as `text/css` and `text/javascript` are their respective defaults.
+根據 HTML5 的規格，附上 CSS 和 JavaScript 檔案 通常不需要指定 `type`，因為 `text/css` 和 `text/javascript` 已經是各自的預設值。
 
-#### HTML5 spec links
+#### HTML5 規格連結
 
-- [Using link](https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
-- [Using style](https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
-- [Using script](https://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
+- [使用 link](https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
+- [使用 style](https://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
+- [使用 script](https://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
 </div>
 
 ```html
@@ -172,7 +172,7 @@ Per HTML5 spec, typically there is no need to specify a `type` when including CS
 ### 實用性優先於純粹性
 {: #practicality-over-purity }
 
-Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.
+應該要竭盡可能維護 HTML 的標準與情境，但不應犧牲實用性。只要有可能，盡量以最低的複雜度，使用最少的標記。
 </div>
 
 ```html
@@ -187,7 +187,7 @@ Strive to maintain HTML standards and semantics, but not at the expense of pract
 ### 屬性順序
 {: #attribute-order }
 
-HTML attributes should come in this particular order for easier reading of code.
+為了可以更容易閱讀程式碼，HTML 屬性應該要按照以下的順序列出。
 
 - `class`
 - `id`, `name`
@@ -203,7 +203,7 @@ Attributes that are most commonly used for identifying elements should come firs
 
 ```html
 <a class="..." id="..." data-toggle="modal" href="#">
-  Example link
+  範例連結
 </a>
 
 <input class="form-control" type="text">
@@ -221,7 +221,7 @@ For further reading, consult the [WhatWG section on boolean attributes](https://
 
 > The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
 
-If you <em>must</em> include the attribute's value, and **you don't need to**, follow this WhatWG guideline:
+If you <strong>must</strong> include the attribute's value, and **you don't need to**, follow this WhatWG guideline:
 
 > If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.
 
@@ -259,14 +259,14 @@ Whenever possible, avoid superfluous parent elements when writing HTML. Many tim
 ### 編輯器偏好設定
 {: #editor-preferences }
 
-Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:
+為了避免常見的不一致程式碼，以及讓人覺得骯髒的差異比對，要把編輯器做以下設定：
 
-- Use soft-tabs set to two spaces.
-- Trim trailing white space on save.
-- Set encoding to UTF-8.
-- Add new line at end of files.
+- 使用設定為 2 個空白的 Soft Tab。
+- 儲存時，移除尾端的空白字元。
+- 編碼設定為 UTF-8。
+- 在檔案的尾端新增一行。
 
-Consider documenting and applying these preferences to your project's `.editorconfig` file. For an example, see [the one in Bootstrap](https://github.com/twbs/bootstrap/blob/main/.editorconfig). Learn more [about EditorConfig](https://editorconfig.org).
+請考慮把這些偏好設定在專案的 `.editorconfig` 檔案裡記錄、設定起來。實際案例請看 [Bootstrap](https://github.com/twbs/bootstrap/blob/main/.editorconfig) 做的。深入閱讀 [EditorConfig](https://editorconfig.org)。
 </div>
 
 ## CSS

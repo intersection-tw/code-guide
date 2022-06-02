@@ -1,8 +1,8 @@
 name: 程式碼編寫指南，由 @mdo 撰寫
 description: 一致、有彈性且能長期維護的 HTML、CSS 開發標準。
-url: https://codeguide.co
+url: https://codeguide.intersection.tw
 permalink: pretty
 sass:
   style: compressed
 version: 4.0.0
-og_image: https://raw.githubusercontent.com/mdo/code-guide/gh-pages/code-guide-social.png
+og_image: https://codeguide.intersection.tw/code-guide-social.png
