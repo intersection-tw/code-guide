@@ -466,6 +466,7 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 
 <div markdown="1">
 ### 單一宣告
+{: #single-declarations }
 
 In instances where a rule set includes **only one declaration**, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.
 
@@ -492,6 +493,7 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 
 <div markdown="1">
 ### 捷徑語法標記
+{: #shorthand-notation }
 
 Limit shorthand declaration usage to instances where you must explicitly set all available values. Frequently overused shorthand properties include:
 
@@ -530,6 +532,7 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
 
 <div markdown="1">
 ### 在預處理器使用巢狀結構
+{: #nesting-in-preprocessors }
 
 Avoid unnecessary nesting in preprocessors whenever possible—keep it simple and avoid reverse nesting. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
 
@@ -552,6 +555,7 @@ Avoid unnecessary nesting in preprocessors whenever possible—keep it simple an
 
 <div markdown="1">
 ### 在預處理器使用運算子
+{: #operators-in-preprocessors }
 
 For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
 </div>
@@ -570,6 +574,7 @@ For improved readability, wrap all math operations in parentheses with a single 
 
 <div markdown="1">
 ### 註解
+{: #comments }
 
 Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name. Use the `//` syntax when writing CSS with preprocessors. When shipping CSS to production, remove all comments.
 
@@ -592,6 +597,7 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 
 <div markdown="1">
 ### Class 名稱
+{: #comments }
 
 - Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., `.btn` and `.btn-danger`).
 - Avoid excessive and arbitrary shorthand notation. `.btn` is useful for _button_, but `.s` doesn't mean anything.
@@ -617,6 +623,7 @@ It's also useful to apply many of these same rules when creating custom properti
 
 <div markdown="1">
 ### 選擇器
+{: #selectors }
 
 - Use classes over generic element tags for more explicit and reliable styling that isn't dependent on your markup.
 - Avoid using several attribute selectors (e.g., `[class^="..."]`) on commonly occuring components. Browser performance is known to be impacted by these.
@@ -643,6 +650,7 @@ span { ... }
 
 <div markdown="1">
 ### 子代與後代選擇器
+{: #child-and-descendant-selectors }
 
 When necessary, it may be helpful to use [the child combinator (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) to limit the cascade of some styles in elements like `<table>`s that are often recursively nested. Use it to limit styles to the immediate children elements of a parent element to avoid unnecessary overrides later on.
 </div>
@@ -656,6 +664,7 @@ When necessary, it may be helpful to use [the child combinator (`>`)](https://de
 
 <div markdown="1">
 ### 組織結構
+{: #organization }
 
 - Organize sections of code by component.
 - Develop a consistent commenting hierarchy.
