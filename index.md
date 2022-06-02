@@ -77,7 +77,7 @@ layout: default
 ### HTML5 Doctype
 {: #html5-doctype }
 
-Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page. In keeping with the suggested syntax, keep it lowercase.
+每一個 HTML 頁面的開頭，都要確實使用[標準模式](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)，就可以盡可能在每個瀏覽器的模樣是一致。為了跟語法建議一致，使用小寫。
 
 </div>
 
@@ -101,7 +101,7 @@ Enforce [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirk
 
 > Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.
 
-Read more about the `lang` attribute [in the spec](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element). Head to the <abbr title="Internet Assigned Numbers Authority">IANA</abbr> for a [list of language codes](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
+從[規格](https://html.spec.whatwg.org/multipage/semantics.html#the-html-element)，深入閱讀 `lang` 屬性。前往 <abbr title="Internet Assigned Numbers Authority">IANA</abbr> 找 [語言代碼清單](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)。
 </div>
 
 ```html
