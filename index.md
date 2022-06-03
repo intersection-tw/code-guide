@@ -198,7 +198,7 @@ layout: default
 - `tabindex`
 - `style`
 
-Attributes that are most commonly used for identifying elements should come first—`class`, `id`, `name`, and `data` attributes. Miscellaneous attributes unique to specific elements come second, followed by accessibility and style related attributes.
+先放最常用來辨識元素的屬性－`class`、`id`、`name` 然後是 `data`。接下來是元素專用的其它屬性；最後是無障礙設計和樣式相關的屬性。
 </div>
 
 ```html
@@ -215,17 +215,17 @@ Attributes that are most commonly used for identifying elements should come firs
 ### 二元屬性
 {: #boolean-attributes }
 
-A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.
+二元屬性是不需要宣告值的屬性。XHTML 要求得宣告值，但 HTML 沒這樣需求。
 
-For further reading, consult the [WhatWG section on boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)
+想要深入理解，可以查閱 [WhatWG 這段，對二元屬性的意見](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)。
 
-> The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
+> 元素出現二元屬性，代表是 True 值，而沒有該屬性，就是 False 值。
 
-If you <strong>must</strong> include the attribute's value, and **you don't need to**, follow this WhatWG guideline:
+如果屬性<strong>一定得要</strong>有值，雖然**不需要這樣做**，可以按照 WhatWG 的規範：
 
-> If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.
+> 如果有設定屬性，它的值不是空白字串，就是 [...] 屬性的唯一名稱，且前方和尾端沒有空白。
 
-In short, **don't add a value**.
+簡單來說，就是**不要加上值**。
 </div>
 
 ```html
@@ -242,7 +242,7 @@ In short, **don't add a value**.
 ### 精簡標記使用
 {: #reduce-markup }
 
-Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML.
+撰寫 HTML 的時候，盡可能避免多餘的上層元素。很多時候，這得要不斷修改與重構，但會產生比較少 HTML。
 </div>
 
 ```html
@@ -582,13 +582,13 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 
 ```scss
 // 不良範例
-// Modal header
+// 彈出視窗的標題
 .modal-header {
   ...
 }
 
 // 優良範例
-// Wrapping element for .modal-title and .modal-close
+// 包覆 .modal-title 和 .modal-close 的元素
 .modal-header {
   ...
 }
@@ -596,7 +596,7 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 
 <div markdown="1">
 ### Class 名稱
-{: #comments }
+{: #class-names }
 
 - Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., `.btn` and `.btn-danger`).
 - Avoid excessive and arbitrary shorthand notation. `.btn` is useful for _button_, but `.s` doesn't mean anything.
