@@ -275,22 +275,22 @@ layout: default
 ### 語法
 {: #css-syntax }
 
-- Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.
-- When grouping selectors, keep individual selectors to a single line.
-- Include one space before the opening brace of declaration blocks for legibility.
-- Place closing braces of declaration blocks on a new line.
-- Include one space after `:` for each declaration.
-- Each declaration should appear on its own line for more accurate error reporting.
-- End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.
-- Comma-separated property values should include a space after each comma (e.g., `box-shadow`).
-- Use space-separated values for color properties (e.g., `color: rgb(0 0 0 / .5)`). [See the Colors section for more information.](#colors)
-- Don't prefix property values or color parameters with a leading zero (e.g., `.5` instead of `0.5` and `-.5px` instead of `-0.5px`).
-- Lowercase all hex values, e.g., `#fff`. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.
-- Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`.
-- Quote attribute values in selectors, e.g., `input[type="text"]`. [They’re only optional in some cases](https://mathiasbynens.be/notes/unquoted-attribute-values#css), and it’s a good practice for consistency.
-- Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
+- 使用 2 個空白的 Soft Tab—這是可以保證程式碼在任何環境，都長得一樣的唯一方法。
+- 為選擇器 ，每個選擇器都維持一行。
+- 為了易讀性考量，宣告的起頭大括號前面，要有空格。
+- 宣告的關閉大括號要換行。
+- 每個宣告的 `:` 後面要有空白。
+- 每個宣告應該都是單獨一行，錯誤回報才會更精準。
+- 所有宣告的結尾都有分號。最後一個宣告可以省略，然而，沒有的話，程式碼更容易出錯。
+- 以逗號分隔的屬性值，應該要在逗號之後加個空白（例如：`box-shadow`）。
+- 以空白分隔的方式使用顏色屬性（例如：`color: rgb(0 0 0 / .5)`），[詳見顏色段落](#colors)。
+- 屬性值或顏色參數不需要前綴 0（例如：`.5` 取代 `0.5`，以及 `-.5px` 取代 `-0.5px`）。
+- 16 進位值全部是小寫，例如：`#fff`。小寫字母因為通常有比較多獨特的形狀，在掃視文件的時候，辨識容易許多。
+- 盡可能使用捷徑來表示16 進位值，例如：`#fff` 取代 `#ffffff`。
+- 選擇器裡的屬性值要用引號，例如：`input[type="text"]`。[只有一些特定情況才不必這樣做](https://mathiasbynens.be/notes/unquoted-attribute-values#css)，這是保持一致的好方法。
+- 數值為 0 的時候，避免指定單位。例如：`margin: 0;`，而不是 `margin: 0px;`。
 
-Questions on the terms used here? See the [syntax section of the Cascading Style Sheets article](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax) on Wikipedia.
+對於這裡的用語有問題？請看 Wikipedia 上，[階層式樣式表的語法段落](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax)。
 </div>
 
 ```scss
