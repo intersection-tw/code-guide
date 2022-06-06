@@ -448,7 +448,7 @@ layout: default
 ### Media Query 放置方法
 {: #media-query-placement }
 
-Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
+把要用到的 Media Query，盡可能放在相關的規則附近。不要打包成另一組獨立的樣式表，或是文件的尾端。這樣做，之後會讓其他人不小心就錯過。請參考常見的設置方法。
 </div>
 
 ```css
@@ -467,9 +467,9 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 ### 單一宣告
 {: #single-declarations }
 
-In instances where a rule set includes **only one declaration**, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.
+假設有組規則只有**一個宣告**，為了可讀性和更方便編輯，請考慮拿掉換行。其它有多重宣告的規則，還是要分成多行。
 
-The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.
+這樣做的主因是偵測錯誤－例如：CSS 驗證工具指出在 183 行的語法錯誤。在單一宣告的情境，就直接看到。而多重宣告的情況，為了整齊，還是得要多行。
 </div>
 
 ```scss
@@ -478,7 +478,7 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 .span2 { width: 140px; }
 .span3 { width: 220px; }
 
-// 多組宣告則是每個一行
+// 多重宣告則是每個一行
 .sprite {
   display: inline-block;
   width: 16px;
@@ -494,7 +494,7 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 ### 捷徑語法標記
 {: #shorthand-notation }
 
-Limit shorthand declaration usage to instances where you must explicitly set all available values. Frequently overused shorthand properties include:
+只有在必需強調想設定所有可用的值時，才會使用捷徑宣告。常見濫用的捷徑屬性包含：
 
 - `padding`
 - `margin`
@@ -503,11 +503,11 @@ Limit shorthand declaration usage to instances where you must explicitly set all
 - `border`
 - `border-radius`
 
-Usually we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. A `0` value implies an override of either a browser default or previously specified value.
+通常，沒有必要設定捷徑屬性所提供的全部值。舉例來說：HTML 的標題只設定了上和下的 margin，因此，有必要的時候，僅需要覆蓋這兩個值。`0` 值代表覆蓋了瀏覽器預設值，或先前指定的值。
 
-Excessive use of shorthand properties leads to sloppier code with unnecessary overrides and unintended side effects.
+過度使用捷徑屬性，會導致沒必要的覆蓋和預料之外的副作用，讓程式碼更雜亂。
 
-The Mozilla Developer Network has a great article on [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) for those unfamiliar with notation and behavior.
+Mozilla Developer Network 有一篇針對[捷徑屬性](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)的優良文章，寫給不熟標記和行為的人。
 </div>
 
 ```scss
