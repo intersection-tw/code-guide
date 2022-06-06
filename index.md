@@ -373,9 +373,9 @@ layout: default
 ### 邏輯屬性
 {: #logical-properties }
 
-Logical properties are alternatives to directional and dimensonal properties based on abstract terms like *block* and *inline*. By default, block refers to the vertical direction (top and bottom) while inline refers to the horizontal direction (right and left). You can begin to use these values in your CSS in all modern, evergreen browsers.
+邏輯屬性，是以 *block* 和 *inline* 等抽象名詞替代方向與尺寸屬性。block 預設代表垂直方向（上與下），而 inline 是水平方向（右與左）。在所有現代與持續發展的瀏覽器，都可以開始在 CSS 使用這些值。
 
-**Why use logical properties?** Not every language flows left-ro-right like English, so the [writing mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) needs to be flexible. With logical properties, you can easily support languages that can be written horizontally or vertically (like Chinese, Japanese, and Korean). Plus, they're usually shorter and simpler to write.
+**為什麼要使用邏輯屬性？**不是每個語言都跟英文一樣，是從左往右看。因此，[Writing Mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) 得能靈活使用。有了邏輯屬性，就可以輕鬆地支援水平或垂直書寫的與言（像是中文、日文與韓文）。另外，通常寫起來比較簡短、簡易。
 
 **延伸閱讀**
 
@@ -385,7 +385,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
 </div>
 
 ```scss
-// 沒有邏輯屬性
+// 未使用邏輯屬性
 .element {
   margin-right: auto;
   margin-left: auto;
@@ -393,7 +393,7 @@ Logical properties are alternatives to directional and dimensonal properties bas
   border-bottom: 1px solid #eee;
 }
 
-// 有邏輯屬性
+// 使用邏輯屬性
 .element {
   margin-inline: auto;
   border-block: 1px solid #eee;
@@ -404,9 +404,9 @@ Logical properties are alternatives to directional and dimensonal properties bas
 ### 顏色
 {: #colors }
 
-With the support of [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/) [in all major browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb#space-separated_values), `rgba()` and `hsla()` are now aliases for `rgb()` and `hsl()`, meaning you can modify alpha values in `rgb()` and `hsl()`. Along with this comes support for new space-separated syntax for color values. For compability with future CSS color functions, use this new syntax.
+所有主流瀏覽器都已支援 [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/)，`rgba()` 和 `hsla()` 現在跟 `rgb()` 和 `hsl()` 是相同的，也就是說，能夠在 `rgb()` 和 `hsl()` 修改 Alpha 值。同時，顏色值也支援以空白分隔的新語法。為了能跟未來的 CSS 顏色函式相容，就用新語法吧。
 
-Regardless of your color values and syntax, always ensure your color choices meet [WCAG minimum contrast ratios](https://webaim.org/articles/contrast/) (4.5:1 for 16px and smaller, 3:1 for larger).
+除了顏色值和語法，挑選顏色的時候也要確保符合 [WCAG 的最小對比度](https://webaim.org/articles/contrast/)（16px 以下是 4.5:1；以上是3:1）。
 
 **延伸閱讀：**
 
@@ -425,13 +425,13 @@ Regardless of your color values and syntax, always ensure your color choices mee
 ### 避免使用 `@import`
 {: #avoid-imports }
 
-Compared to `<link>`s, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:
+跟 `<link>` 相比，`@import` 比較慢，增加額外的頁面請求，也可能會導致其它無法預知的問題。要避免使用，可以採用以下替代方案：
 
-- Use multiple `<link>`elements
-- Compile your CSS with a preprocessor like [Sass](https://sass-lang.com/) or [Less](https://lesscss.org/) into a single file
-- Concatenate your CSS files with features provided in Rails, Jekyll, and other environments
+- 使用多個 `<link>` 元素
+- 以預處理器 [Sass](https://sass-lang.com/) 或 [Less](https://lesscss.org/) 把 CSS 編譯為單一檔案
+- 使用 Rails、Jekyll 和其它環境提供的串接 CSS 檔案功能
 
-For more information, [read this article by Steve Souders](https://www.stevesouders.com/blog/2009/04/09/dont-use-import/).
+[閱讀 Steve Souders 的文章](https://www.stevesouders.com/blog/2009/04/09/dont-use-import/)了解更多細節。
 </div>
 
 ```html
