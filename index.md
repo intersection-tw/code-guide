@@ -533,7 +533,7 @@ Mozilla Developer Network 有一篇針對[捷徑屬性](https://developer.mozill
 ### 在預處理器使用巢狀結構
 {: #nesting-in-preprocessors }
 
-Avoid unnecessary nesting in preprocessors whenever possible—keep it simple and avoid reverse nesting. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
+使用預處理器也要避免不必要的巢狀結構－保持簡單，避免反向巢狀結構。只有在得要把樣式根據上一層設定範圍時，或是有多個元素，才做成巢狀。
 
 **延伸閱讀：**
 
@@ -556,7 +556,7 @@ Avoid unnecessary nesting in preprocessors whenever possible—keep it simple an
 ### 在預處理器使用運算子
 {: #operators-in-preprocessors }
 
-For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
+所有數學運算都用括號包起來，值、變數與運算子之間都有一個空白，可讀性就會大幅改善。
 </div>
 
 ```scss
@@ -575,9 +575,9 @@ For improved readability, wrap all math operations in parentheses with a single 
 ### 註解
 {: #comments }
 
-Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name. Use the `//` syntax when writing CSS with preprocessors. When shipping CSS to production, remove all comments.
+程式碼是由人所撰寫和維護。確保程式碼對其他人來說，是充分描述的、有良好註解，以及友善的。好的程式碼註解傳達情境或目標。請勿僅僅重複描述元件或 Class 名稱。在預處理器撰寫 CSS 時，使用 `//` 語法。發布到正式環境時，要移除所有註解。
 
-Be sure to write in complete sentences for larger comments and succinct phrases for general notes.
+比較龐大的註解記得要寫成完整的句子；一般記錄使用簡潔的詞彙。
 </div>
 
 ```scss
@@ -598,14 +598,14 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 ### Class 名稱
 {: #class-names }
 
-- Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., `.btn` and `.btn-danger`).
-- Avoid excessive and arbitrary shorthand notation. `.btn` is useful for _button_, but `.s` doesn't mean anything.
-- Keep classes as short and succinct as possible.
-- Use meaningful names; use structural or purposeful names over presentational.
-- Prefix classes based on the closest parent or base class.
-- Use `.js-*` classes to denote behavior (as opposed to style), but keep these classes out of your CSS.
+- Class 要保持小寫，並且使用半型橫槓（而不是底線或 camelCase）。半型橫槓在相關的 Class 就像天然的分隔（例如：`.btn` 和 `.btn-danger`）。
+- 避免過度和隨意的捷徑標記。**按鈕**取為 `.btn` 很有用，但 `.s` 就沒有意義了。
+- Class 要盡量保持簡短與簡潔。
+- 使用有意義的名稱；使用結構或有意義的名稱，而不是根據外表。
+- 根據最近的上層或基礎 Class 來取前綴詞。
+- 使用 Class 名稱 `.js-*` 來標注行為（而不是樣式）。但是，這些 Class 不會出現在 CSS 檔案裡。
 
-It's also useful to apply many of these same rules when creating custom properties and preprocessor variable names.
+在編寫 Custom Properties 和預處理器變數名稱時，使用這些規則也很好用。
 </div>
 
 ```scss
