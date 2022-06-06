@@ -533,7 +533,7 @@ Mozilla Developer Network 有一篇針對[捷徑屬性](https://developer.mozill
 ### 在預處理器使用巢狀結構
 {: #nesting-in-preprocessors }
 
-使用預處理器也要避免不必要的巢狀結構－保持簡單，避免反向巢狀結構。只有在得要把樣式根據上一層設定範圍時，或是有多個元素，才做成巢狀。
+使用預處理器也要避免不必要的巢狀結構－保持簡單，避免反向巢狀結構。只有得要把樣式根據上一層設定範圍時，或是有多個元素，才做成巢狀。
 
 **延伸閱讀：**
 
@@ -605,7 +605,7 @@ Mozilla Developer Network 有一篇針對[捷徑屬性](https://developer.mozill
 - 根據最近的上層或基礎 Class 來取前綴詞。
 - 使用 Class 名稱 `.js-*` 來標注行為（而不是樣式）。但是，這些 Class 不會出現在 CSS 檔案裡。
 
-在編寫 Custom Properties 和預處理器變數名稱時，使用這些規則也很好用。
+在編寫 Custom Properties 和預處理器變數名稱時，這些規則也很好用。
 </div>
 
 ```scss
@@ -624,10 +624,10 @@ Mozilla Developer Network 有一篇針對[捷徑屬性](https://developer.mozill
 ### 選擇器
 {: #selectors }
 
-- Use classes over generic element tags for more explicit and reliable styling that isn't dependent on your markup.
-- Avoid using several attribute selectors (e.g., `[class^="..."]`) on commonly occuring components. Browser performance is known to be impacted by these.
-- Keep selectors short and strive to limit the number of elements in each selector to three.
-- Scope classes to the closest parent `only` when necessary (e.g., when not using prefixed classes).
+- 使用 Class 取代一般元素標籤，樣式設定就不是依靠標記，而更明顯且可靠。
+- 經常重複使用的元件，要避免使用多重屬性選擇器（例如：`[class^="..."]`）。已知瀏覽器的效能會受到影響。
+- 選擇器要簡短，並且盡力把每個選擇器的元素限制在 3 個。
+- 只有在有必要的時候，根據最近的上層，限制 Class 範圍（例如：沒有要用前綴 Class 的時候）。
 
 **延伸閱讀：**
 
@@ -651,7 +651,7 @@ span { ... }
 ### 子代與後代選擇器
 {: #child-and-descendant-selectors }
 
-When necessary, it may be helpful to use [the child combinator (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) to limit the cascade of some styles in elements like `<table>`s that are often recursively nested. Use it to limit styles to the immediate children elements of a parent element to avoid unnecessary overrides later on.
+在有必要的情況下，使用[子代組合語法 (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) 限制常常是重複巢狀結構的元素樣式階層很有幫助，像是 `<table>`。用來把上層元素的樣式限制在最近的後代，避免接下來產生沒必要的覆蓋。
 </div>
 
 ```css
@@ -665,10 +665,10 @@ When necessary, it may be helpful to use [the child combinator (`>`)](https://de
 ### 組織結構
 {: #organization }
 
-- Organize sections of code by component.
-- Develop a consistent commenting hierarchy.
-- Use consistent white space to your advantage when separating sections of code for scanning larger documents.
-- When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.
+- 依照元件來整理程式碼段落。
+- 規劃一致的註解結構。
+- 掃視大型文件時，善加利用一致的留白，來分開程式碼各個段落。
+- 使用多支 CSS 檔案時，根據元件來區分，而不是頁面。頁面會重新規劃，這樣子，元件就要移動。
 </div>
 
 ```scss
