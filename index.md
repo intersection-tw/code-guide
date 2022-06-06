@@ -219,7 +219,7 @@ layout: default
 
 想要深入理解，可以查閱 [WhatWG 這段，對二元屬性的意見](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)。
 
-> 元素出現二元屬性，代表是 True 值，而沒有該屬性，就是 False 值。
+> 元素出現二元屬性，代表是 true 值，而沒有該屬性，就是 false 值。
 
 如果屬性<strong>一定得要</strong>有值，雖然**不需要這樣做**，可以按照 WhatWG 的規範：
 
@@ -317,21 +317,21 @@ layout: default
 ### 宣告順序
 {: #declaration-order }
 
-Property declarations should be grouped together in the following order:
+屬性宣告應根據以下順序群組起來：
 
-1. Positioning
-2. Box model
-3. Typographic
-4. Visual
-5. Misc
+1. 設定位置
+2. Box 模型
+3. 文字排版
+4. 視覺
+5. 其它
 
-Positioning comes first because it can remove an element from the normal document flow and override box model related styles. The box model—whether it's flex, float, grid, or table—follows as it dictates a component's dimensions, placement, and alignment. Everything else takes place _inside_ the component or without impacting the previous two sections, and thus they come last.
+因為位置設定，可以把元素從一般文件佈局流動移除，並且覆蓋 Box 模型，因此要放在最前面。接著是 Box 模型，不管是 Flex、Float、Grid 或 Table－因為掌控了元件的尺寸、擺放位置與靠齊。其它東西，因為是在元件的**裡面**發生，或者，不會影響前面兩段，而放在後面。
 
-While `border` is part of the box model, most systems globally reset the [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) to `border-box` so that `border-width` doesn't affect overall dimensions. This, combined with keeping `border` near `border-radius`, is why it's under the Visual section instead.
+雖然 `border` 是 Box 模型的一部分，大多數的系統都一律把 [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) 設定為 `border-box`，不讓 `border-width` 影響整體尺寸。加上讓 `border` 跟 `border-radius` 更靠近，這就是改放在視覺段落的原因。
 
-Preprocessor mixins and functions should appear wherever most appropriate. For example, a `border-top-radius()` mixin would go in place of `border-radius` properties, while a `responsive-font-size()` function would go in place of `font-size` properties.
+預處理器的 Mixin 和函式要擺在最合適的地方。例如：`border-top-radius()` 這個 Mixin 要放在 `border-radius` 屬性的位置；而 `responsive-font-size()` 會在 `font-size` 屬性的位置。
 
-For a complete list of properties and their order, please see the [property order for Stylelint](https://github.com/stormwarning/stylelint-config-recess-order) used by [Bootstrap](https://getbootstrap.com).
+在 [Bootstrap](https://getbootstrap.com) 使用的 [Stylelint 屬性順序](https://github.com/stormwarning/stylelint-config-recess-order)，可以看到所有屬性列表與其順序。
 </div>
 
 ```scss
