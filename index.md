@@ -146,7 +146,7 @@ layout: default
 ### 附上 CSS 和 JavaScript
 {: #css-and-javascript-includes }
 
-根據 HTML5 的規格，附上 CSS 和 JavaScript 檔案 通常不需要指定 `type`，因為 `text/css` 和 `text/javascript` 已經是各自的預設值。
+根據 HTML5 規格，附上 CSS 和 JavaScript 檔案，通常不需要指定 `type`，因為 `text/css` 和 `text/javascript` 已經是各自的預設值。
 
 #### HTML5 規格連結
 
@@ -259,14 +259,14 @@ layout: default
 ### 編輯器偏好設定
 {: #editor-preferences }
 
-為了避免常見的不一致程式碼，以及讓人覺得骯髒的差異比對，要把編輯器做以下設定：
+為了避免常見的程式碼不一致，以及毫無頭緒的差異比對，要把編輯器做以下設定：
 
 - 使用設定為 2 個空白的 Soft Tab。
 - 儲存時，移除尾端的空白字元。
 - 編碼設定為 UTF-8。
 - 在檔案的尾端新增一行。
 
-請考慮把這些偏好設定在專案的 `.editorconfig` 檔案裡記錄、設定起來。實際案例請看 [Bootstrap](https://github.com/twbs/bootstrap/blob/main/.editorconfig) 做的。深入閱讀 [EditorConfig](https://editorconfig.org)。
+請考慮把這些偏好設定在專案的 `.editorconfig` 檔案裡記錄、設定起來。請看 [Bootstrap](https://github.com/twbs/bootstrap/blob/main/.editorconfig) 做的實際案例。深入閱讀 [EditorConfig](https://editorconfig.org)。
 </div>
 
 ## CSS
@@ -448,7 +448,7 @@ layout: default
 ### Media Query 放置方法
 {: #media-query-placement }
 
-把要用到的 Media Query，盡可能放在相關的規則附近。不要打包成另一組獨立的樣式表，或是文件的尾端。這樣做，之後會讓其他人不小心就錯過。請參考常見的設置方法。
+把要用到的 Media Query，盡可能放在相關規則附近。不要打包成另一組獨立的樣式表，或放在文件的尾端。這樣做，之後會讓其他人不小心就錯過。請參考常見的設置方法。
 </div>
 
 ```css
@@ -467,7 +467,7 @@ layout: default
 ### 單一宣告
 {: #single-declarations }
 
-假設有組規則只有**一個宣告**，為了可讀性和更方便編輯，請考慮拿掉換行。其它有多重宣告的規則，還是要分成多行。
+假設有組規則只有**一個宣告**，為了可讀性和編輯更便利，請考慮拿掉換行。其它有多重宣告的規則，還是要分成多行。
 
 這樣做的主因是偵測錯誤－例如：CSS 驗證工具指出在 183 行的語法錯誤。在單一宣告的情境，就直接看到。而多重宣告的情況，為了整齊，還是得要多行。
 </div>
@@ -494,7 +494,7 @@ layout: default
 ### 捷徑語法標記
 {: #shorthand-notation }
 
-只有在必需強調想設定所有可用的值時，才會使用捷徑宣告。常見濫用的捷徑屬性包含：
+只有在強調得設定所有可用的值時，才會使用捷徑宣告。常見濫用的捷徑屬性包含：
 
 - `padding`
 - `margin`
