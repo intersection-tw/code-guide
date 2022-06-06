@@ -42,7 +42,7 @@ layout: default
 
 ## 黃金原則
 
-確實要求每個人，或自己，時時刻刻都一致認同規範。不管大還是小，有錯誤的地方請大聲說出來。想要對這份程式碼編寫指南進行新增或貢獻，請[在 Github 開 Issue](https://github.com/mdo/code-guide/issues/new)。
+確實要求每個人，或自己，時時刻刻都一致認同規範。不管大還是小，有錯誤的地方請大聲說出來。想要對這份程式碼編寫指南進行新增或貢獻，請[在 Github 開 Issue](https://github.com/mdo/code-guide/issues/new)，中文翻譯相關 Issue [請點此](https://github.com/intersection-tw/code-guide/issues/new)。
 
 > 每行程式碼，不管有多少人參與，應該要看起來是一個人寫出來的。
 
